@@ -12701,7 +12701,7 @@ void main() {
     hasSidecar: false,
     present: null,          // true/false once fetch resolves
     raw: null,              // raw DESIGN.md for the raw tab
-    mdNewerThanJson: false, // stale-hint flag
+    mdNewerThanJson: false, // compatibility stale-hint flag
     loading: false,
     error: null,
     collapsed: {            // narrative-section accordion state
@@ -13197,7 +13197,7 @@ void main() {
     box.className = 'stale';
     box.innerHTML = `
       <span class="stale-dot"></span>
-      <span class="stale-text"><strong>DESIGN.md is newer than .impeccable/design.json.</strong> Run <code>${IMPECCABLE_COMMAND} document</code> to refresh the sidecar.</span>
+      <span class="stale-text"><strong>The design sidecar may be out of date with DESIGN.md.</strong> Run <code>${IMPECCABLE_COMMAND} document</code> to refresh the sidecar.</span>
     `;
     return box;
   }
